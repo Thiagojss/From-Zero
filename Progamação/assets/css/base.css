@@ -1,0 +1,118 @@
+/* =============================================================================
+   base.css — Progamação
+   Estilos comuns a todas as páginas do projeto (ESTUDOS e PORTIFÓLIO):
+   tokens de cor, reset, tipografia, cabeçalho com navegação, tabelas e rodapé.
+
+   Cada site mantém em css/estilo.css apenas o que é específico dele.
+   Ordem de carregamento nas páginas:
+       ../assets/css/base.css   ->   css/estilo.css
+   ============================================================================= */
+
+/* ---------- tokens ---------- */
+:root {
+    /* cores */
+    --cor-texto:       #1f2328;
+    --cor-fundo:       #fbfbfa;
+    --cor-painel:      #ffffff;
+    --cor-borda:       #dedcd7;
+    --cor-borda-suave: #e9e7e3;
+    --cor-cabecalho:   #f1efec;
+    --cor-link:        #0b5fa5;
+    --cor-link-hover:  #083f6e;
+
+    /* medidas e fontes (cada página pode sobrescrever --largura-max) */
+    --largura-max:     1100px;
+    --fonte-base:      system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    --fonte-mono:      ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+/* ---------- reset / base ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+    margin: 0;
+    padding: 1.5rem clamp(1rem, 3vw, 3rem);
+    font-family: var(--fonte-base);
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--cor-texto);
+    background: var(--cor-fundo);
+}
+
+/* ---------- tipografia ---------- */
+h1, h2, h3 { line-height: 1.25; margin: 1.5rem 0 0.6rem; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; border-bottom: 2px solid var(--cor-borda); padding-bottom: 0.3rem; }
+h3 { font-size: 1.15rem; }
+
+p { margin: 0.7rem 0; }
+
+a { color: var(--cor-link); }
+a:hover { color: var(--cor-link-hover); }
+
+code, kbd, samp {
+    font-family: var(--fonte-mono);
+    font-size: 0.92em;
+    background: var(--cor-cabecalho);
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+}
+
+hr { border: 0; border-top: 1px solid var(--cor-borda); margin: 1.4rem 0; }
+
+/* ---------- listas ---------- */
+ul, ol { padding-left: 1.4rem; }
+
+/* ---------- cabeçalho + navegação (iguais em todas as páginas) ---------- */
+header {
+    max-width: var(--largura-max);
+    margin: 0 auto 1.5rem;
+    border-bottom: 3px double var(--cor-texto);
+}
+
+header h1 { margin-bottom: 0.2rem; letter-spacing: 0.5px; }
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    padding: 0;
+    margin: 0.2rem 0 0.8rem;
+}
+
+header nav a { text-decoration: none; font-weight: 600; }
+
+/* ---------- conteúdo e rodapé ---------- */
+main {
+    max-width: var(--largura-max);
+    margin: 0 auto;
+}
+
+footer {
+    max-width: var(--largura-max);
+    margin: 2.5rem auto 1rem;
+    border-top: 3px double var(--cor-texto);
+    font-size: 0.9rem;
+    color: #4a5056;
+}
+
+/* ---------- tabelas ---------- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0.8rem 0;
+    font-size: 0.95rem;
+}
+
+th, td {
+    border: 1px solid var(--cor-borda);
+    padding: 0.4rem 0.6rem;
+    text-align: left;
+    vertical-align: top;
+}
+
+th { background: var(--cor-cabecalho); }
+tr:nth-child(even) td { background: #fafaf8; }

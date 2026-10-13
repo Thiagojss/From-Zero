@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="icon" type="image/x-icon" href="../PORTIFÓLIO/imgs/pfp.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+<header>
+    <h1>HTML</h1>
+    <nav>
+        <ul>
+            <li><a href="../PORTIFÓLIO/index.html">Home</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <section><h2>Introdução em X Passos.</h2> 
+        <details><summary>Estrutura basica do Arquivo HTML</summary>
+            <h3>Estrutura e Sintaxe.</h3>        
+                <p>HTML, Hyper Text Markup Language, responsável por estruturar o conteúdo de uma página web, como <b>links, textos, marcações, imagens, etc</b>. Composto por elementos representados por <b>&lt;tags&gt;</b>.</p>
+                <img src="imgs/Estrutura HTML.png" alt="Estrutura padrão de um documento HTML">
+                <p>Acima mostra uma estrutura básica de um documento HTML, essas tags presentes na imagens estão presentes em todos os documentos HTML em sua origem.</p>
+                <dl>
+                    <dt><b>&lt;!DOCTYPE html&gt;</b></dt>
+                    <dd>Declaração do tipo de documento, informa ao navegador que o documento é um arquivo HTML5.</dd>
+                    <dt><b>&lt;html&gt;</b></dt>
+                    <dd>Elemento raiz do documento HTML, envolve todo o conteúdo da página.</dd>
+                    <dt><b>&lt;head&gt;</b></dt>
+                    <dd>Contém informações sobre o documento, como título, metadados e links para arquivos externos.</dd>
+                    <dt><b>&lt;body&gt;</b></dt>
+                    <dd>Contém o conteúdo visível da página, como texto, imagens, links e outros elementos.</dd>
+                </dl>
+                <p>Cada tag tem uma função específica e pode conter <b>atributos</b> que modificam seu comportamento. Mas será um tema tratado mais a frente.</p>
+                <p>Resumindo: Todo documento HTML tera uma estrutura básica com as tags &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt; e &lt;body&gt;.</p>
+                <p>Sabendo a estrutura geral de maneira basica, agora é necessario enxergar como funciona a <b>SINTAXE</b>do html</p>
+                <img src="imgs/SintaxeHTML.png" alt="Sintaxe do HTML">
+                <p>Acima mostra a sintaxe do HTML, onde cada elemento é representado por uma tag de abertura e uma tag de fechamento, com o conteúdo entre elas. As tags podem ter atributos que fornecem informações adicionais sobre o elemento.</p>
+        <hr>
+        </details>
+    </section>
+    <br><br>
+    <section>
+        <details><summary>HTML Semântico</summary>
+            <h3>HTML Semantico.</h3>
+                <p>HTML semântico é uma abordagem de desenvolvimento web que utiliza tags HTML com significado específico para descrever o conteúdo da página. Essas tags fornecem informações sobre a estrutura e o propósito do conteúdo, tornando-o mais compreensível para os navegadores, mecanismos de busca e leitores de tela.</p>
+                <p>São todas as tags como &lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;section&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, etc.</p>
+                <p>Elas possuem um certo grau de hierarquia e organização na pagina para que haja uma melhor comprensão do sistema ao ler o código.</p>
+                <img src="imgs/HTMLsemantico.jpg" alt="Exemplo de HTML Semântico">
+                <p>HTML semantico serve para ordernar corretamente o conteúdo da página. Asim melhorando a maneira que o sistema web le o codigo.</p>
+                <p>Exemplo: O elemento &lt;header&gt; é usado para definir o cabeçalho da página, enquanto o elemento &lt;footer&gt; é usado para definir o rodapé. O elemento &lt;main&gt; é usado para definir o conteúdo principal da página, enquanto o elemento &lt;aside&gt; é usado para definir conteúdo complementar.</p>
+                <caption>Lista de Tags Semanticas:</caption>
+                <dl>
+                    <dt><b>&lt;header&gt;</b></dt>
+                    <dd>Define o cabeçalho da página, geralmente contém o título, logotipo e navegação principal.</dd>
+                    <dt><b>&lt;nav&gt;</b></dt>
+                    <dd>Define a seção de navegação da página, geralmente contém links para outras páginas do site.</dd>
+                    <dt><b>&lt;main&gt;</b></dt>
+                    <dd>Define o conteúdo principal da página.</dd>
+                    <dt><b>&lt;section&gt;</b></dt>
+                    <dd>Define uma seção do conteúdo da página, geralmente usada para agrupar conteúdo relacionado.</dd>
+                    <dt><b>&lt;article&gt;</b></dt>
+                    <dd>Define um artigo independente, geralmente usado para conteúdo que pode ser distribuído ou reutilizado.</dd>
+                    <dt><b>&lt;aside&gt;</b></dt>
+                    <dd>Define conteúdo complementar, geralmente usado para informações secundárias ou links relacionados.</dd>
+                    <dt><b>&lt;footer&gt;</b></dt>
+                    <dd>Define o rodapé da página, geralmente contém informações de copyright, links para políticas de privacidade e outros links importantes.</dd>
+                </dl>
+                <p>HTML Semantico desta pagina:</p>
+                <img src="imgs/thispage.png" alt="HTML Semantico desta pagina">
+        </details>
+    </section>   
+    <section><h2>Lista de Tags e Atributos HTML</h2>
+        <details><summary>Tags</summary>
+            <details><summary>Tags por funções</summary>
+            <h3>Metadados</h3>
+                <p>Essas tags são: <b>&lt;!DOCTYPE &gt;, &lt;html&gt;, &lt;head&gt;, &lt;title&gt;, &lt;meta&gt;, &lt;body&gt;, &lt;link&gt;, &lt;base&gt;, &lt;style&gt;.</b></p>     
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;!DOCTYPE&gt;</td>
+                        <td>Informa o brownser que o documento é um arquivo HTML5.</td></tr>
+                    <tr><td>&lt;html&gt;</td>
+                        <td>Elemento raiz do documento HTML, envolve todo o conteúdo da página</td></tr>
+                    <tr><td>&lt;head&gt;</td>
+                        <td>Contém informações sobre o documento, como título, metadados e links para arquivos externos.</td></tr>
+                    <tr><td>&lt;title&gt;</td>
+                        <td>Define o título da página, exibido na aba do navegador.</td></tr>
+                    <tr><td>&lt;meta&gt;</td>
+                        <td>Fornece metadados sobre o documento, como charset, viewport e descrição.</td></tr>
+                    <tr><td>&lt;body&gt;</td>
+                        <td>Contém o conteúdo visível da página, como texto, imagens, links e outros elementos.</td></tr>
+                    <tr><td>&lt;link&gt;</td>
+                        <td>Usado para vincular arquivos externos, como folhas de estilo CSS.</td></tr>
+                    <tr><td>&lt;base&gt;</td>
+                    <td>Define a URL base para todos os links relativos na página.</td></tr>
+                    <tr><td>&lt;style&gt;</td>
+                    <td>Permite incluir estilos CSS diretamente no documento HTML.</td></tr>
+                </table>
+            <hr>
+            <h3>Estrutura Semantica</h3>
+                <p>Essas tags são: <b>&lt;header&gt;, &lt;nav&gt;, &lt;main&gt;, &lt;article&gt;, &lt;section&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;div&gt;, &lt;span&gt;, &lt;address&gt;, &lt;search&gt;, &lt;hgroup&gt;, </b></p>
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;header&gt;</td>
+                        <td>Define o cabeçalho da página, geralmente contém o título, logotipo e navegação principal.</td></tr>
+                    <tr><td>&lt;nav&gt;</td>
+                        <td>Define a seção de navegação da página, geralmente contém links para outras páginas do site.</td></tr>
+                    <tr><td>&lt;main&gt;</td>
+                        <td>Define o conteúdo principal da página.</td></tr>
+                    <tr><td>&lt;article&gt;</td>
+                        <td>Define um artigo independente, geralmente usado para conteúdo que pode ser distribuído ou reutilizado.</td></tr>
+                    <tr><td>&lt;section&gt;</td>
+                        <td>Define uma seção do conteúdo da página, geralmente usada para agrupar conteúdo relacionado.</td></tr>
+                    <tr><td>&lt;aside&gt;</td>
+                        <td>Define conteúdo complementar, geralmente usado para informações secundárias ou links relacionados.</td></tr>
+                    <tr><td>&lt;footer&gt;</td>
+                        <td>Define o rodapé da página, geralmente contém informações de copyright, links para políticas de privacidade e outros links importantes.</td></tr>
+                    <tr><td>&lt;div&gt;</td>
+                        <td>Define uma divisão ou seção genérica do conteúdo, usada para agrupar elementos e aplicar estilos.</td></tr>
+                    <tr><td>&lt;span&gt;</td>
+                        <td>Define um trecho de texto ou conteúdo em linha, usado para aplicar estilos ou identificar partes específicas do conteúdo.</td></tr>
+                    <tr><td>&lt;address&gt;</td>
+                        <td>Define informações de contato, como endereço, telefone e e-mail.</td></tr>
+                    <tr><td>&lt;search&gt;</td>
+                        <td>Define uma seção de pesquisa, geralmente contém um formulário de busca.</td></tr>
+                    <tr><td>&lt;hgroup&gt;</td>
+                        <td>Define um grupo de títulos, usado para agrupar elementos &lt;h1&gt; a &lt;h6&gt; relacionados.</td></tr>
+                </table>
+            <hr>
+            <h3>Formatação e Agrupamento de texto</h3>
+                <p>Essas tags são: <b>&lt;p&gt;, &lt;h1&gt; a &lt;h6&gt;, &lt;blockquote&gt;, &lt;figure&gt;, &lt;figcpation&gt;, &lt;ul&gt;, &lt;ol&gt;, &lt;li&gt;, &lt;menu&gt;, &lt;dl&gt; &lt;dd&gt;, &lt;dt&gt; </b></p>
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;p&gt;</td>
+                        <td>Define um parágrafo de texto.</td></tr>
+                    <tr><td>&lt;h1&gt; a &lt;h6&gt;</td>
+                        <td>Define títulos de diferentes níveis, sendo &lt;h1&gt; o mais importante e &lt;h6&gt; o menos importante.</td></tr>
+                    <tr><td>&lt;blockquote&gt;</td>
+                        <td>Define uma citação em bloco, geralmente usada para citar um trecho de texto de outra fonte.</td></tr>
+                    <tr><td>&lt;figure&gt;</td>
+                        <td>Define um conteúdo independente, como uma imagem ou gráfico, que pode ser referenciado no texto.</td></tr>
+                    <tr><td>&lt;figcaption&gt;</td>
+                        <td>Define uma legenda para o conteúdo do elemento &lt;figure&gt;.</td></tr>
+                    <tr><td>&lt;ul&gt;</td>
+                        <td>Define uma lista não ordenada, geralmente usada para itens sem uma ordem específica.</td></tr>
+                    <tr><td>&lt;ol&gt;</td>
+                        <td>Define uma lista ordenada, geralmente usada para itens que seguem uma sequência específica.</td></tr>
+                    <tr><td>&lt;li&gt;</td>
+                        <td>Define um item de lista, usado dentro de elementos &lt;ul&gt; ou &lt;ol&gt;.</td></tr>
+                    <tr><td>&lt;menu&gt;</td>
+                        <td>Define um menu de navegação, geralmente usado para agrupar links de navegação.</td></tr>
+                    <tr><td>&lt;dl&gt;</td>
+                        <td>Define uma lista de definição, usada para agrupar termos e suas definições.</td></tr>
+                    <tr><td>&lt;dt&gt;</td>
+                        <td>Define um termo em uma lista de definição, usado dentro do elemento &lt;dl&gt;.</td></tr>
+                    <tr><td>&lt;dd&gt;</td>
+                        <td>Define a definição de um termo em uma lista de definição, usado dentro do elemento &lt;dl&gt;.</td></tr>
+                </table>
+            <hr>  
+            <h3>Significados e Marcações de texto</h3>
+                <p>Essas tags são: <b>&lt;a&gt;, &lt;abbr&gt;, &lt;b&gt;, &lt;bdi&gt;, &lt;bdo&gt;, &lt;br&gt;, &lt;cite&gt;, &lt;code&gt;, &lt;data&gt;, &lt;del&gt;, &lt;dfn&gt;, &lt;kbd&gt;, &lt;q&gt;, &lt;rp&gt;, &lt;ruby&gt;, &lt;s&gt;, &lt;samp&gt;, &lt;time&gt;, &lt;u&gt;, &lt;var&gt;, &lt;wbr&gt;, &lt;strong&gt;, &lt;i&gt;, &lt;em&gt;, &lt;mark&gt;, &lt;small&gt;, &lt;rt&gt;,, &lt;ins&gt;, &lt;sub&gt;, &lt;sup&gt;,</b></p>
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;a&gt;</td>
+                        <td>Define um link, usado para navegar entre páginas ou seções de uma página.</td></tr>
+                    <tr><td>&lt;abbr&gt;</td>
+                        <td>Define uma abreviação ou sigla, geralmente usada para fornecer informações adicionais sobre o termo.</td></tr>
+                    <tr><td>&lt;b&gt;</td>
+                        <td>Define texto em negrito, usado para destacar palavras ou frases importantes.</td></tr>
+                    <tr><td>&lt;bdi&gt;</td>
+                        <td>Define um trecho de texto que deve ser isolado do restante do conteúdo, geralmente usado para lidar com idiomas diferentes.</td></tr>
+                    <tr><td>&lt;bdo&gt;</td>
+                        <td>Define a direção do texto, usado para alterar a direção do texto em idiomas que são escritos da direita para a esquerda.</td></tr>
+                    <tr><td>&lt;br&gt;</td>
+                        <td>Define uma quebra de linha, usada para separar linhas de texto.</td></tr>
+                    <tr><td>&lt;cite&gt;</td>
+                        <td>Define uma citação, geralmente usada para citar o título de uma obra ou fonte.</td></tr>
+                    <tr><td>&lt;code&gt;</td>
+                        <td>Define um trecho de código, geralmente usado para exibir código-fonte ou comandos.</td></tr>
+                    <tr><td>&lt;data&gt;</td>
+                        <td>Define um valor de dados, usado para associar informações adicionais a um elemento.</td></tr>
+                    <tr><td>&lt;del&gt;</td>
+                        <td>Define texto que foi removido, geralmente usado para indicar alterações em um documento.</td></tr>
+                    <tr><td>&lt;dfn&gt;</td>
+                        <td>Define uma definição, geralmente usada para explicar o significado de um termo.</td></tr>
+                    <tr><td>&lt;kbd&gt;</td>
+                        <td>Define um trecho de texto que representa uma tecla do teclado, geralmente usado para exibir comandos ou atalhos.</td></tr>
+                    <tr><td>&lt;q&gt;</td>
+                        <td>Define uma citação em linha, geralmente usada para citar um trecho de texto de outra fonte.</td></tr>
+                    <tr><td>&lt;rp&gt;</td>
+                        <td>Define o conteúdo de fallback para navegadores que não suportam o elemento &lt;ruby&gt;.</td></tr>
+                    <tr><td>&lt;ruby&gt;</td>
+                        <td>Define um texto ruby, usado para exibir anotações fonéticas ou traduções de caracteres.</td></tr>
+                    <tr><td>&lt;s&gt;</td>
+                        <td>Define texto riscado, geralmente usado para indicar que o conteúdo não é mais relevante.</td></tr>
+                    <tr><td>&lt;samp&gt;</td>
+                        <td>Define um trecho de texto que representa a saída de um programa ou comando.</td></tr>
+                    <tr><td>&lt;time&gt;</td>
+                        <td>Define uma data ou hora, geralmente usado para exibir informações de tempo.</td></tr>
+                    <tr><td>&lt;u&gt;</td>
+                        <td>Define texto sublinhado, geralmente usado para destacar palavras ou frases importantes.</td></tr>
+                    <tr><td>&lt;var&gt;</td>
+                        <td>Define uma variável, geralmente usado para exibir nomes de variáveis em código-fonte.</td></tr>
+                    <tr><td>&lt;wbr&gt;</td>
+                        <td>Define um ponto de quebra de linha opcional, usado para indicar onde o navegador pode quebrar uma linha de texto.</td></tr>
+                    <tr><td>&lt;strong&gt;</td>
+                        <td>Define texto em negrito com ênfase, geralmente usado para destacar palavras ou frases importantes.</td></tr>
+                    <tr><td>&lt;i&gt;</td>
+                        <td>Define texto em itálico, geralmente usado para destacar palavras ou frases importantes.</td></tr>
+                    <tr><td>&lt;em&gt;</td>
+                        <td>Define texto em itálico com ênfase, geralmente usado para destacar palavras ou frases importantes.</td></tr>
+                    <tr><td>&lt;mark&gt;</td>
+                        <td>Define texto destacado, geralmente usado para indicar informações importantes.</td></tr>
+                    <tr><td>&lt;small&gt;</td>
+                        <td>Define texto em tamanho menor, geralmente usado para exibir informações secundárias.</td></tr>
+                    <tr><td>&lt;rt&gt;</td>
+                        <td>Define a pronúncia de um caractere em um texto ruby.</td></tr>
+                    <tr><td>&lt;ins&gt;</td>
+                        <td>Define texto que foi adicionado, geralmente usado para indicar alterações em um documento.</td></tr>
+                    <tr><td>&lt;sub&gt;</td>
+                        <td>Define texto em subscrito, geralmente usado para exibir fórmulas químicas ou matemáticas.</td></tr>
+                    <tr><td>&lt;sup&gt;</td>
+                        <td>Define texto em sobrescrito, geralmente usado para exibir expoentes ou notas de rodapé.</td></tr>
+                </table>
+            <hr>   
+            <h3>Midia em HTML</h3>
+                <p>Essas tags são: <b>&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;, &lt;source&gt;, &lt;track&gt;, &lt;embed&gt;, &lt;object&gt;, &lt;param&gt;, &lt;canvas&gt;, &lt;svg&gt;</b></p>
+                <table>
+                    <tr><th>Tag</th>
+                    <th>Descrição</th></tr>
+                    <tr><td>&lt;img&gt;</td>
+                        <td>Define uma imagem, usada para exibir gráficos, fotos ou outros tipos de imagens.</td></tr>
+                    <tr><td>&lt;audio&gt;</td>
+                        <td>Define um elemento de áudio, usado para reproduzir arquivos de áudio.</td></tr>
+                    <tr><td>&lt;video&gt;</td>
+                        <td>Define um elemento de vídeo, usado para reproduzir arquivos de vídeo.</td></tr>
+                    <tr><td>&lt;source&gt;</td>
+                        <td>Define uma fonte de mídia, usada dentro dos elementos &lt;audio&gt; e &lt;video&gt; para especificar os arquivos a serem reproduzidos.</td></tr>
+                    <tr><td>&lt;track&gt;</td>
+                        <td>Define faixas de legendas ou descrições para elementos de mídia, como &lt;video&gt; e &lt;audio&gt;.</td></tr>
+                    <tr><td>&lt;embed&gt;</td>
+                        <td>Define um conteúdo incorporado, como um arquivo Flash ou PDF.</td></tr>
+                    <tr><td>&lt;object&gt;</td>
+                        <td>Define um objeto incorporado, usado para exibir conteúdo multimídia ou interativo.</td></tr>
+                    <tr><td>&lt;param&gt;</td>
+                        <td>Define parâmetros para elementos &lt;object&gt;, usados para passar informações adicionais para o objeto incorporado.</td></tr>
+                    <tr><td>&lt;canvas&gt;</td>
+                        <td>Define uma área de desenho em HTML, usada para criar gráficos, animações e outros elementos visuais dinâmicos.</td></tr>
+                    <tr><td>&lt;svg&gt;</td>
+                        <td>Define gráficos vetoriais escaláveis, usados para criar imagens e animações baseadas em vetores.</td></tr>
+                </table>
+            <hr>
+            <h3>Tags de Tabelas do HTML</h3>
+                <p>Essas tags são: <b>&lt;table&gt;, &lt;caption&gt;, &lt;thead&gt;, &lt;tbody&gt;, &lt;tfoot&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</b></p>
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;table&gt;</td>
+                        <td>Define uma tabela, usada para organizar dados em linhas e colunas.</td></tr>
+                    <tr><td>&lt;caption&gt;</td>
+                        <td>Define uma legenda para a tabela, geralmente exibida acima da tabela.</td></tr>
+                    <tr><td>&lt;thead&gt;</td>
+                        <td>Define o cabeçalho da tabela, usado para agrupar as linhas de cabeçalho.</td></tr>
+                    <tr><td>&lt;tbody&gt;</td>
+                        <td>Define o corpo da tabela, usado para agrupar as linhas de dados.</td></tr>
+                    <tr><td>&lt;tfoot&gt;</td>
+                        <td>Define o rodapé da tabela, usado para agrupar as linhas de rodapé.</td></tr>
+                    <tr><td>&lt;tr&gt;</td>
+                        <td>Define uma linha da tabela, usada dentro dos elementos &lt;thead&gt;, &lt;tbody&gt; e &lt;tfoot&gt;.</td></tr>
+                    <tr><td>&lt;th&gt;</td>
+                        <td>Define uma célula de cabeçalho da tabela, geralmente exibida em negrito e centralizada.</td></tr>
+                    <tr><td>&lt;td&gt;</td>
+                        <td>Define uma célula de dados da tabela, usada para exibir informações na tabela.</td></tr>
+                </table>
+            <hr>
+            <h3>Tags de Formulários do HTML</h3>
+                <p>Essas tags são: <b>&lt;form&gt;, &lt;label&gt;, &lt;input&gt;, &lt;textarea&gt;, &lt;button&gt;, &lt;select&gt;, &lt;option&gt;, &lt;optgroup&gt;, &lt;datalist&gt;, &lt;fieldset&gt;, &lt;legend&gt;, &lt;output&gt;, &lt;meter&gt;, &lt;progress&gt;, &lt;selectedcontent&gt;</b></p>
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;form&gt;</td>
+                        <td>Define um formulário, usado para coletar informações do usuário.</td></tr>
+                    <tr><td>&lt;label&gt;</td>
+                        <td>Define um rótulo para um elemento de formulário, usado para associar texto descritivo a um campo de entrada.</td></tr>
+                    <tr><td>&lt;input&gt;</td>
+                        <td>Define um campo de entrada, usado para coletar informações do usuário.</td></tr>
+                    <tr><td>&lt;textarea&gt;</td>
+                        <td>Define uma área de texto multilinha, usada para coletar informações do usuário.</td></tr>
+                    <tr><td>&lt;button&gt;</td>
+                        <td>Define um botão, usado para enviar formulários ou executar ações específicas.</td></tr>
+                    <tr><td>&lt;select&gt;</td>
+                        <td>Define uma lista suspensa, usada para selecionar uma opção entre várias disponíveis.</td></tr>
+                    <tr><td>&lt;option&gt;</td>
+                        <td>Define uma opção em uma lista suspensa, usada dentro do elemento &lt;select&gt;.</td></tr>
+                    <tr><td>&lt;optgroup&gt;</td>
+                        <td>Define um grupo de opções em uma lista suspensa, usado para agrupar opções relacionadas.</td></tr>
+                    <tr><td>&lt;datalist&gt;</td>
+                        <td>Define uma lista de sugestões para um campo de entrada, usada para fornecer opções de preenchimento automático.</td></tr>
+                    <tr><td>&lt;fieldset&gt;</td>
+                        <td>Define um grupo de elementos de formulário, usado para agrupar campos relacionados.</td></tr>
+                    <tr><td>&lt;legend&gt;</td>
+                        <td>Define uma legenda para um grupo de elementos de formulário, usado dentro do elemento &lt;fieldset&gt;.</td></tr>
+                    <tr><td>&lt;output&gt;</td>
+                        <td>Define o resultado de um cálculo ou ação, usado para exibir informações geradas pelo formulário.</td></tr>
+                    <tr><td>&lt;meter&gt;</td>
+                        <td>Define uma barra de medição, usada para exibir valores dentro de um intervalo específico.</td></tr>
+                    <tr><td>&lt;progress&gt;</td>
+                        <td>Define uma barra de progresso, usada para exibir o andamento de uma tarefa ou processo.</td></tr>
+                    <tr><td>&lt;selectedcontent&gt;</td>
+                        <td>Define o conteúdo selecionado em um elemento de formulário, usado para exibir informações relacionadas à seleção do usuário.</td></tr>
+                </table>
+            <hr>
+            <h3>Tags de Mídia do HTML</h3>
+                <p>Essas tags são: <b>&lt;img&gt;, &lt;audio&gt;, &lt;video&gt;, &lt;source&gt;, &lt;track&gt;, &lt;embed&gt;, &lt;object&gt;, &lt;param&gt;, &lt;canvas&gt;, &lt;svg&gt;, &lt;area&gt;, &lt;map&gt;, &lt;iframe&gt;</b></p>
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;img&gt;</td>
+                        <td>Define uma imagem, usada para exibir gráficos, fotos ou outros tipos de imagens.</td></tr>
+                    <tr><td>&lt;audio&gt;</td>
+                        <td>Define um elemento de áudio, usado para reproduzir arquivos de áudio.</td></tr>
+                    <tr><td>&lt;video&gt;</td>
+                        <td>Define um elemento de vídeo, usado para reproduzir arquivos de vídeo.</td></tr>
+                    <tr><td>&lt;source&gt;</td>
+                        <td>Define uma fonte de mídia, usada dentro dos elementos &lt;audio&gt; e &lt;video&gt; para especificar os arquivos a serem reproduzidos.</td></tr>
+                    <tr><td>&lt;track&gt;</td>
+                        <td>Define faixas de legendas ou descrições para elementos de mídia, como &lt;video&gt; e &lt;audio&gt;.</td></tr>
+                    <tr><td>&lt;embed&gt;</td>
+                        <td>Define um conteúdo incorporado, como um arquivo Flash ou PDF.</td></tr>
+                    <tr><td>&lt;object&gt;</td>
+                        <td>Define um objeto incorporado, usado para exibir conteúdo multimídia ou interativo.</td></tr>
+                    <tr><td>&lt;param&gt;</td>
+                        <td>Define parâmetros para elementos &lt;object&gt;, usados para passar informações adicionais para o objeto incorporado.</td></tr>
+                    <tr><td>&lt;canvas&gt;</td>
+                        <td>Define uma área de desenho em HTML, usada para criar gráficos, animações e outros elementos visuais dinâmicos.</td></tr>
+                    <tr><td>&lt;svg&gt;</td>
+                        <td>Define gráficos vetoriais escaláveis, usados para criar imagens e animações baseadas em vetores.</td></tr>
+                    <tr><td>&lt;area&gt;</td>
+                        <td>Define uma área clicável em uma imagem mapa, usada para criar mapas de imagem interativos.</td></tr>
+                    <tr><td>&lt;map&gt;</td>
+                        <td>Define um mapa de imagem, usado para associar áreas clicáveis a uma imagem.</td></tr>
+                    <tr><td>&lt;iframe&gt;</td>
+                        <td>Define um quadro em linha, usado para incorporar outro documento HTML dentro da página atual.</td></tr>
+                </table>
+            <hr>
+            <h3>Tags de Scripts do HTML</h3>
+                <p>Essas tags são: <b>&lt;script&gt;, &lt;noscript&gt;, &lt;deatils&gt;, &lt;slot&gt;, &lt;template&gt;, &lt;dialog&gt;</b></p>
+                <table>
+                    <tr><th>Tag</th>
+                        <th>Descrição</th></tr>
+                    <tr><td>&lt;script&gt;</td>
+                        <td>Define um bloco de código JavaScript, usado para adicionar interatividade e funcionalidades à página.</td></tr>
+                    <tr><td>&lt;noscript&gt;</td>
+                        <td>Define conteúdo alternativo a ser exibido quando o navegador não suporta ou tem o JavaScript desativado.</td></tr>
+                    <tr><td>&lt;details&gt;</td>
+                        <td>Define um elemento interativo que pode ser expandido ou recolhido, usado para exibir informações adicionais.</td></tr>
+                    <tr><td>&lt;slot&gt;</td>
+                        <td>Define um ponto de inserção para conteúdo em um componente personalizado, usado em conjunto com o Shadow DOM.</td></tr>
+                    <tr><td>&lt;template&gt;</td>
+                        <td>Define um fragmento de HTML que pode ser reutilizado, mas não é renderizado até ser instanciado via JavaScript.</td></tr>
+                    <tr><td>&lt;dialog&gt;</td>
+                        <td>Define uma caixa de diálogo ou modal, usada para exibir informações ou interações temporárias.</td></tr>
+                    <tr><td>&lt;output&gt;</td>
+                        <td>Define o resultado de um cálculo ou ação, usado para exibir informações geradas pelo formulário.</td></tr>
+                    <tr><td>&lt;meter&gt;</td>
+                        <td>Define uma barra de medição, usada para exibir valores dentro de um intervalo específico.</td></tr>
+                    <tr><td>&lt;progress&gt;</td>
+                        <td>Define uma barra de progresso, usada para exibir o andamento de uma tarefa ou processo.</td></tr>
+                    <tr><td>&lt;selectedcontent&gt;</td>
+                        <td>Define o conteúdo selecionado em um elemento de formulário, usado para exibir informações relacionadas à seleção do usuário.</td></tr>
+                </table>
+            <hr>
+            </details> 
+             <p><a href="https://www.w3schools.com/tags/default.asp">TAGS</a> - Acessar todas as Tags </p>
+        </details>       
+    </section>
+    <br><br>
+    <section>
+        <details><summary>Atributos</summary>
+        <p><a href="https://www.w3schools.com/tags/ref_attributes.asp">ATRIBUTOS</a> - Acessar todos os Atributos </p>
+        </details>
+    </section>
+    <section><h2>Testando Funções</h2>
+        <section>
+            <details><summary>Lista</summary>
+                <p><b>Tags</b> usadas nessa sessão: <code>&lt;ul&gt;, &lt;ol&gt;, &lt;caption&gt; &lt;li&gt;, &lt;dl&gt;, &lt;dt&gt;, &lt;dd&gt;, &lt;menu&gt;</code></p>
+                <p><b>Atributos</b> usados nessa sessão: <code>type; start; reversed</code></p>
+                <ul><b>Lista Nao Ordenada.</b>
+                    <li>Uma lista sem numeração, sem "ordem"</li>
+                    <li>Possui pontos iniciais, sendo possivel retirar pelo CSS</li>
+                    <li>TAGS usadas para produzir a tabela: <code>ul; caption; li</code></li>
+                    <li><code>ul</code>: Define a criação de uma <b>Lista Nao Ordenada </b></li>
+                    <li><code>caption</code>: Define o <b>Titulo</b> da tabela aparente</li>
+                    <li><code>li</code>: Define cada item da lista, cada linha.</li></ul>
+                <ol><b>Lista Ordenada</b>
+                    <li>Uma Lista Ordenada, distinçao hierarquica entre os itens</li>
+                    <li>ao inves de utilizar <code>ul</code>, se utiliza <code>ol</code></li>
+                    <li><code>caption</code> e <code>li</code> se mantem com mesmo sentido na estrutura</li></ol>
+                <dl><b>Lista Descritiva</b>
+                    <dt>Cada item da lista abre um topico para uma breve descrição do proprio topico
+                    <dd>Dando uma informação a mais ou apenas dando uma continuação do tema de maneira aprofundada.</dd></dt>
+                    <dt>É possivel abrir mais de um topico dentro da propria celula <code>dt </code>
+                    <dd>cada termo deve dar um sentido ao topico principal</dd>
+                    <dd>tags usadas <code>dl; dt; dd; caption</code></dd>
+                    <dd><code>dl</code> Cria a lista</dd>
+                    <dd><code>dt</code> Cria o topico principal</dd>
+                    <dd><code>dd</code> Cria o SubTópico</dd></dt></dl>
+                <article><b>Atributos em <code>&lt;ol&gt;:</code></b>
+                    <ol start="3"><code>start="3"</code>
+                        <li>Contagem da Lista inicia no 3</li>
+                        <li>X</li>
+                        <li>X</li></ol>
+                    <ol reversed="1"><code>reversed="1"</code>
+                        <li>Reversed com valor booleano indica SIM ao iniciar a contagem invertida</li>
+                        <li>X</li>
+                        <li>X</li></ol>
+                    <ol type="A"><code>type="A"</code>
+                        <li>Hierarquia por ordem alfabetica maiuscula</li>
+                        <li>X</li>
+                        <li>X</li></ol>
+                    <ol type="a"><code>type="a"</code>
+                        <li>Hierarquia por ordem alfabertica minuscula</li>
+                        <li>X</li>
+                        <li>X</li></ol>
+                    <ol type="I"><code>type="I"</code>
+                        <li>Numero Romanos Maiusculos</li>
+                        <li>X</li>
+                        <li>X</li></ol>
+                    <ol type="i"><code>type="i"</code>
+                        <li>Numero Romanos Minusculos</li>
+                        <li>X</li>
+                        <li>X</li></ol></article>
+                <b>Lista de Menu:</b>
+                <menu>
+                    <li>Menu geralmente usando para interações</li>
+                    <li><button>X</button></li>
+                    <li><button>X</button></li></menu>
+                <b>RESUMO:</b>
+                <ol>
+                    <li>Lista Ordenada: <code>ol</code></li>
+                    <li>Lista Nao Ordenada: <code>ul</code></li>
+                    <li>Lista Descritiva <code>dl</code></li>
+                    <li>Item de Lista Ordenada e Nao ordenada: <code>li</code></li>
+                    <li>Item de Lista Descritiva: <code>dt e dd</code></li>
+                    <li>Atributos especificos: <code>type; reversed; start; button</code></li></ol>
+            </details>
+        </section>
+        <br><br>
+        <section>
+        <details>
+            <summary>Tabelas</summary>
+            <h3>Testando Formularios</h3>
+        </details>
+        </section>
+        <br><br>
+        <section>
+        <details>
+            <summary>Formularios</summary>
+            <h3>Testando Formularios</h3>
+        </details>
+        </section>
+    </section>
+    <aside class="pagina">
+        <img src="imgs/tagshtml.png" alt="tags">
+    </aside>
+
+</main>
+
+    <footer>
+        <h2>Referências</h2>
+        <details>
+        <summary>Referências</summary>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/">MDN Documentation</a></li>
+                <li><a href="https://www.w3schools.com/html/">W3Schools</a></li>
+                <li><a href="https://www.w3.org/TR/html52/">W3C HTML5.2</a></li>
+            <hr>
+            </ul>
+        </details>
+        <br><br>
+        <p>© 2026 Tiger</p>
+    </footer>
+</body>
+</html>

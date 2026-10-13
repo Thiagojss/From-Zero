@@ -1,0 +1,42 @@
+/* =============================================================================
+   estilo.css — PORTIFÓLIO (específico deste site)
+   Cartões de seção, foto de perfil e barras de progresso dos estudos.
+
+   Depende de ../assets/css/base.css (tokens, tipografia, header, tabelas).
+   ============================================================================= */
+
+/* ---------- seções como cartões ---------- */
+main section {
+    background: var(--cor-painel);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 6px;
+    padding: 0.6rem 1rem;
+    margin-bottom: 1rem;
+}
+
+main section > h1:first-child,
+main section > h2:first-child { margin-top: 0.4rem; }
+
+/* ---------- foto de perfil ---------- */
+main section img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid var(--cor-borda);
+    border-radius:5%;
+}
+
+/* ---------- barras de progresso dos estudos ---------- */
+progress {
+    width: min(260px, 100%);
+    height: 0.9rem;
+    vertical-align: middle;
+    accent-color: var(--cor-link);
+}
+
+label { font-weight: 600; }
+
+/* rótulo que antes era um <caption> solto (inválido fora de <table>) */
+.legenda {
+    font-weight: 600;
+    margin: 0.4rem 0 0.2rem;
+}

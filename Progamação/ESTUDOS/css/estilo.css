@@ -1,0 +1,95 @@
+/* =============================================================================
+   estilo.css — ESTUDOS (específico deste site)
+   Layout de jornal: a matéria (o conteúdo sobre HTML) fica na coluna da
+   esquerda e a folha de referência com todas as tags fica estática na direita,
+   no tamanho real da imagem (700 x 900), encolhendo junto com a janela.
+
+   Depende de ../../assets/css/base.css (tokens, tipografia, header, tabelas).
+   ============================================================================= */
+
+:root { --largura-max: 1600px; }   /* a matéria precisa de mais largura */
+
+/* ---------- jornal: matéria à esquerda, imagem à direita ---------- */
+main {
+    /* 700px = resolução real de imgs/tagshtml.png. Abaixo disso a coluna
+       encolhe junto com a janela; nunca amplia além do tamanho nativo. */
+    --coluna-imagem:  min(700px, 44vw);
+    --espaco-colunas: 2rem;
+}
+
+/* clearfix: impede que o float do aside escape do main */
+main::after { content: ""; display: block; clear: both; }
+
+/* A folha de referência é o PRIMEIRO elemento dentro do main (ver html.html):
+   um float só fica ao lado do que vem DEPOIS dele na marcação. Assim ela nasce
+   colada no topo direito, logo abaixo do header, e a matéria flui na coluna da
+   esquerda — as duas visíveis ao mesmo tempo, tela dividida. */
+aside.referencia {
+    float: right;
+    position: sticky;      /* fica presa no topo enquanto a matéria rola */
+    top: 1rem;
+    width: var(--coluna-imagem);
+    margin: 0 0 1.5rem var(--espaco-colunas);
+
+    /* Se a janela for mais baixa que a imagem (900px), a folha rola dentro da
+       própria coluna, em vez de ter o final cortado e inalcançável. */
+    max-height: calc(100vh - 2rem);
+
+}
+
+aside.referencia img {
+    display: block;
+    width: 100%;     /* nunca passa dos 700px nativos */
+    height: auto;    /* preserva a proporção 700:900 */
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    background: var(--cor-painel);
+}
+
+/* a matéria nunca invade a coluna da imagem */
+main > section {
+    margin-right: calc(var(--coluna-imagem) + var(--espaco-colunas));
+    margin-bottom: 1.5rem;
+}
+
+/* ---------- blocos de conteúdo ---------- */
+details {
+    background: var(--cor-painel);
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    margin: 0.6rem 0;
+}
+
+summary { cursor: pointer; font-weight: 600; padding: 0.3rem 0; }
+summary:hover { color: var(--cor-link); }
+details[open] > summary { border-bottom: 1px solid var(--cor-borda-suave); margin-bottom: 0.6rem; }
+
+/* ---------- listas de definição ---------- */
+dt { font-weight: 600; margin-top: 0.5rem; }
+dd { margin: 0.1rem 0 0.3rem 1.4rem; }
+
+/* ---------- imagens do corpo (dentro das seções) ---------- */
+main section img {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--cor-borda-suave);
+    border-radius: 4px;
+}
+
+/* ---------- responsivo ---------- */
+/* Em telas estreitas as duas colunas não cabem lado a lado: a imagem sai do
+   float e vira um bloco próprio, em largura total até o limite nativo. */
+@media (max-width: 1000px) {
+    main > section { margin-right: 0; }
+
+    aside.referencia {
+        float: none;
+        position: static;
+        width: 100%;
+        max-width: 700px;
+        max-height: none;
+        overflow: visible;
+        margin: 1.2rem auto;
+    }
+}
